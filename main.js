@@ -70,7 +70,7 @@ function checkorder(){
     const names=order.map((el)=>el.name)
     console.log(names);
     let orderPriceVisible=orderPrice.toFixed(2);
-    let option=parseInt(prompt("Total order: $"+orderPriceVisible+"\n\nEnter \"1\" for make de purchase.\nEnter \"0\" for go back."));
+    let option=parseInt(prompt("Total order: $"+orderPriceVisible+"\n\nEnter \"1\" for make the purchase.\nEnter \"0\" for go back."));
     if(option==1){
         confirm();
     }else if(option==0){
