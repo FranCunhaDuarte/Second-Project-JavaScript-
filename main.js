@@ -1,4 +1,4 @@
-let order=[];
+const order=[];
 let orderPrice=0;
 let address="";
 class Food{
@@ -67,9 +67,10 @@ function burgersMenu(){
         }
 }
 function checkorder(){
+    const names=order.map((el)=>el.name)
+    console.log(names);
     let orderPriceVisible=orderPrice.toFixed(2);
     let option=parseInt(prompt("Total order: $"+orderPriceVisible+"\n\nEnter \"1\" for make de purchase.\nEnter \"0\" for go back."));
-    console.log(order);
     if(option==1){
         confirm();
     }else if(option==0){
@@ -86,5 +87,6 @@ function confirm(){
     }else{
         address=prompt("Enter your address.");
         alert("Thanks for trust in us. Enjoy your food.");
+        mainMenu();
     }
 }
